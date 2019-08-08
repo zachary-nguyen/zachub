@@ -8,10 +8,25 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './App.css';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import {Switch,Route} from 'react-router';
+import {Link, BrowserRouter} from 'react-router-dom';
+import HomePage from './views/homePage'
+import ContactMe from './views/contactMe'
+import AboutMe from './views/aboutMe'
+import Compiler from './views/compiler'
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
+    },
+    background: {
+        background: '#2D2675',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -48,53 +63,111 @@ const useStyles = makeStyles(theme => ({
     },
     inputRoot: {
         color: 'inherit',
+
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 7),
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-            width: 120,
+            width: 200,
             '&:focus': {
                 width: 200,
             },
         },
     },
+    list: {
+        width: 250,
+    },
+    fullList: {
+        width: 'auto',
+    },
 }));
 
 function App() {
-  const classes = useStyles();
+    const classes = useStyles();
+
+    const [state, setState] = React.useState({
+        open: false,
+    });
+
+    const toggleDrawer = (open) => event => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, open: open });
+    };
+
+
+    const sideList = () => {
+        return(
+            <List>
+                {[{'All Repositories':'/'}, {'Compiler': '/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                    <ListItem className={'nav'}
+                              component={Link}
+                              to={Object.values(text)[0]}
+                              key={Object.values(text)[0]}>
+                        <ListItemIcon><InboxIcon/></ListItemIcon>
+                        <ListItemText className={'nav-button'} primary={Object.keys(text)[0]}/>
+                    </ListItem>
+                ))}
+            </List>
+        )
+
+    }
   return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        ZacHub
-                    </Typography>
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </div>
-                </Toolbar>
-            </AppBar>
-        </div>
+      <React.Fragment>
+          <BrowserRouter>
+              <div className={classes.root}>
+                  <AppBar className={classes.background} position="static">
+                      <Toolbar>
+                          <IconButton
+                              edge="start"
+                              className={classes.menuButton}
+                              color="inherit"
+                              aria-label="open drawer"
+                              onClick={toggleDrawer(true)}
+                          >
+                              <MenuIcon />
+                          </IconButton>
+                          <Drawer open={state.open} onClose={toggleDrawer( false)}>
+                              <div
+                                  className={classes.list}
+                                  role="presentation"
+                                  onClick={toggleDrawer( false)}
+                                  onKeyDown={toggleDrawer( false)}
+                              >
+                                  {sideList()}
+                              </div>
+                          </Drawer>
+                          <Typography align={'left'} className={classes.title} variant="h6" noWrap>
+                              Code Hub
+                          </Typography>
+                          <div className={classes.search}>
+                              <div className={classes.searchIcon}>
+                                  <SearchIcon />
+                              </div>
+                              <InputBase
+                                  placeholder="Search for a repository…"
+                                  classes={{
+                                      root: classes.inputRoot,
+                                      input: classes.inputInput,
+                                  }}
+                                  inputProps={{ 'aria-label': 'search' }}
+                              />
+                          </div>
+                      </Toolbar>
+                  </AppBar>
+              </div>
+              <Switch>
+                  <Route path='/' exact component={HomePage}/>
+                  <Route path='/about' exact component={AboutMe}/>
+                  <Route path='/contact' exact component={ContactMe}/>
+                  <Route path='/compiler' exact component={Compiler}/>
+              </Switch>
+          </BrowserRouter>
+      </React.Fragment>
   );
 }
 
