@@ -8,21 +8,27 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Popover from '@material-ui/core/Popover';
-import PropTypes from "prop-types";
+import {PropTypes} from "prop-types";
 
 
 const useStyles = makeStyles({
     card: {
-        maxWidth: 476,
+        height: 400,
+        position: 'relative'
     },
-    media: {
-        height: 140,
-    },
+
     center: {
+        position: 'absolute',
         textAlign: 'center',
+        bottom: 0,
+        width: '100%'
+    },
+    top: {
+        height: '90%',
     },
     btn: {
         width: '100%',
+        bottom: 0
     },
     typography: {
         margin: 8,
@@ -50,28 +56,19 @@ export default function RepositoryCard(props) {
 
     return (
         <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
-                />
+            <CardActionArea className={classes.top}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Repository
+                        {props.repository}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        {props.description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions className={classes.center}>
                 <Button href={('https://github.com/zachary-nguyen/' + props.repository + '/archive/master.zip')} download className={classes.btn} size="small" color="primary">
                     Download
-                </Button>
-                <Button className={classes.btn} size="small" color="primary">
-                    View Repository
                 </Button>
                 <Button aria-describedby={id} onClick={handleClick} className={classes.btn} size="small" color="primary">
                     Clone
@@ -98,5 +95,6 @@ export default function RepositoryCard(props) {
 }
 
 RepositoryCard.propTypes = {
-    repository: PropTypes.string
+    repository: PropTypes.string,
+    description: PropTypes.string
 }

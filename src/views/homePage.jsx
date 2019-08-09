@@ -1,49 +1,50 @@
 import RepositoryCard from "../components/repositoryCard";
 import React from "react";
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+import Grid from '@material-ui/core/Grid';
 import axios from 'axios';
 
 function HomePage() {
     const [repositories, setRepositories] = React.useState(null);
 
     React.useEffect(() => {
-        axios.get('https://api.github.com/users/zachary-nguyen/repos')
-            .then(data=> {
-                console.log(data.data);
-                let repos = [];
-                // for(let i = 0; i< data.data.length; i++){
-                //     console.log(data.data[i])
-                // }
-                setRepositories(repos)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }, [repositories])
+        if(repositories === null){
+            axios.get('https://api.github.com/users/zachary-nguyen/repos')
+                .then(result => {
+                    console.log(result.data)
+                    setRepositories(result.data)
+                })
+                .catch(error =>{
+                    console.log(error)
+                })
+        }
+    },[])
+
+    const generateTable  = () => {
+        let tableContent = []
+        console.log(repositories)
+        if(repositories){
+            for(let i=0; i< repositories.length; i++){
+               tableContent.push(
+                   <Grid key={repositories[i].id} item xs>
+                      <RepositoryCard key={repositories[i].id}
+                                      repository={repositories[i].name}
+                                      description={repositories[i].description}/>
+                   </Grid>
+               )
+            }
+            console.log(tableContent)
+           return tableContent;
+        }
+        return null
+    }
     return(
         <div className={'homepage'}>
-            <div className={'homepage-container'}>
-                <Table className={'table-mrg'}>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'}/></TableCell>
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'} /></TableCell>
-                        </TableRow>
-                        <TableRow className={'table-mrg'} >
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'}/></TableCell>
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'}/></TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'}/></TableCell>
-                            <TableCell size={'small'} align={'center'} padding={'none'}><RepositoryCard repository={'InstantMail'}/></TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
+                <Grid container
+                      alignItems="stretch"
+                      spacing={0}>
+                    {generateTable()}
+                </Grid>
 
-            </div>
         </div>
 
     )

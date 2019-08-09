@@ -161,7 +161,7 @@ function App() {
                   </AppBar>
               </div>
               <Switch>
-                  <Route path='/' exact component={HomePage}/>
+                  <Route path='*/' exact component={HomePage}/>
                   <Route path='/about' exact component={AboutMe}/>
                   <Route path='/contact' exact component={ContactMe}/>
                   <Route path='/compiler' exact component={Compiler}/>
