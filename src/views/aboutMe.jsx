@@ -4,7 +4,7 @@ function AboutMe (){
     
     return(
         <div>
-            Hello
+            <img src="codehublogo.png" align={'middle'} alt="logo" height={'100%'} width={'50%'}/>
         </div>
     )
 }

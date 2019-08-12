@@ -142,7 +142,7 @@ function App() {
                               </div>
                           </Drawer>
                           <Typography align={'left'} className={classes.title} variant="h6" noWrap>
-                              Code Hub
+                              <img src="codehublogo.png" alt="logo" height={'50'} width={'10%'}/>
                           </Typography>
                           <div className={classes.search}>
                               <div className={classes.searchIcon}>
@@ -161,7 +161,7 @@ function App() {
                   </AppBar>
               </div>
               <Switch>
-                  <Route path='*/' exact component={HomePage}/>
+                  <Route path='/' exact component={HomePage}/>
                   <Route path='/about' exact component={AboutMe}/>
                   <Route path='/contact' exact component={ContactMe}/>
                   <Route path='/compiler' exact component={Compiler}/>
