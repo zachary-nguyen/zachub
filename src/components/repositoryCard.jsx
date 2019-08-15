@@ -14,7 +14,9 @@ import {PropTypes} from "prop-types";
 const useStyles = makeStyles({
     card: {
         height: 400,
-        position: 'relative'
+        position: 'relative',
+        margin: '20px',
+        minWidth: '400px'
     },
 
     center: {

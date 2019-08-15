@@ -41,7 +41,8 @@ function HomePage() {
         <div className={'homepage'}>
                 <Grid container
                       alignItems="stretch"
-                      spacing={0}>
+                      spacing={0}
+                      className="grid-background">
                     {generateTable()}
                 </Grid>
 
