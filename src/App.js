@@ -20,6 +20,7 @@ import HomePage from './views/homePage'
 import ContactMe from './views/contactMe'
 import AboutMe from './views/aboutMe'
 import Compiler from './views/compiler'
+import Error from './views/Error/Error'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -165,6 +166,7 @@ function App() {
                   <Route path='/about' exact component={AboutMe}/>
                   <Route path='/contact' exact component={ContactMe}/>
                   <Route path='/compiler' exact component={Compiler}/>
+                  <Route component={Error}/>
               </Switch>
           </BrowserRouter>
       </React.Fragment>

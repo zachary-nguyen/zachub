@@ -21,7 +21,6 @@ function HomePage() {
 
     const generateTable  = () => {
         let tableContent = []
-        console.log(repositories)
         if(repositories){
             for(let i=0; i< repositories.length; i++){
                tableContent.push(
