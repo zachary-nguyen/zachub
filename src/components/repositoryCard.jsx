@@ -58,7 +58,7 @@ export default function RepositoryCard(props) {
 
     return (
         <Card className={classes.card}>
-            <CardActionArea onClick={()=>window.open('https:/github.com/zachary-nguyen/' + props.repository,'_blank')} className={classes.top}>
+            <CardActionArea href={'https:/github.com/zachary-nguyen/' + props.repository}  className={classes.top}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {props.repository}
