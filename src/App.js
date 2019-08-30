@@ -104,7 +104,7 @@ function App() {
     const sideList = () => {
         return(
             <List>
-                {[{'All Repositories':window.location.href + '/'}, {'Compiler':window.location.href + '/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                {[{'All Repositories': 'zachub/'}, {'Compiler':'zachub/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
                     <ListItem className={'nav'}
                               component={Link}
                               to={Object.values(text)[0]}
