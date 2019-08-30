@@ -104,7 +104,7 @@ function App() {
     const sideList = () => {
         return(
             <List>
-                {[{'All Repositories':'/'}, {'Compiler': '/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                {[{'All Repositories':window.location.href + '/'}, {'Compiler':window.location.href + '/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
                     <ListItem className={'nav'}
                               component={Link}
                               to={Object.values(text)[0]}
@@ -162,7 +162,7 @@ function App() {
                   </AppBar>
               </div>
               <Switch>
-                  <Route path='/' exact component={HomePage}/>
+                  <Route path='*/' exact component={HomePage}/>
                   <Route path='/about' exact component={AboutMe}/>
                   <Route path='/contact' exact component={ContactMe}/>
                   <Route path='/compiler' exact component={Compiler}/>
