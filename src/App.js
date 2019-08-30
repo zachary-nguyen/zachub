@@ -163,9 +163,9 @@ function App() {
               </div>
               <Switch>
                   <Route path='*/' exact component={HomePage}/>
-                  <Route path='/about' exact component={AboutMe}/>
-                  <Route path='/contact' exact component={ContactMe}/>
-                  <Route path='/compiler' exact component={Compiler}/>
+                  <Route path='/about' component={AboutMe}/>
+                  <Route path='/contact' component={ContactMe}/>
+                  <Route path='/compiler' component={Compiler}/>
                   <Route component={Error}/>
               </Switch>
           </BrowserRouter>
