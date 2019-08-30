@@ -21,6 +21,10 @@ import ContactMe from './views/contactMe'
 import AboutMe from './views/aboutMe'
 import Compiler from './views/compiler'
 import Error from './views/Error/Error'
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory()
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -119,7 +123,7 @@ function App() {
     }
   return (
       <React.Fragment>
-          <BrowserRouter>
+          <BrowserRouter  history={history} basename={process.env.PUBLIC_URL}>
               <div className={classes.root}>
                   <AppBar className={classes.background} position="static">
                       <Toolbar>
