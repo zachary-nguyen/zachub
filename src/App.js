@@ -19,7 +19,7 @@ import {Link} from 'react-router-dom';
 import HomePage from './views/homePage'
 import ContactMe from './views/contactMe'
 import AboutMe from './views/aboutMe'
-import Compiler from './views/compiler'
+import Playground from './views/playground'
 import Error from './views/Error/Error'
 
 const useStyles = makeStyles(theme => ({
@@ -104,7 +104,7 @@ function App() {
     const sideList = () => {
         return(
             <List>
-                {[{'All Repositories': '/'}, {'Compiler':'/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                {[{'All Repositories': '/'}, {'Playground':'/playground'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
                     <ListItem className={'nav'}
                               component={Link}
                               to={Object.values(text)[0]}
@@ -164,7 +164,7 @@ function App() {
                   <Route path='/' exact component={HomePage}/>
                   <Route path='/about'  component={AboutMe}/>
                   <Route path='/contact'  component={ContactMe}/>
-                  <Route path='/compiler'  component={Compiler}/>
+                  <Route path='/playground'  component={Playground}/>
                   <Route component={Error}/>
               </Switch>
       </React.Fragment>
