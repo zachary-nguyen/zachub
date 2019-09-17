@@ -42,7 +42,27 @@ html,body{
   background-color: #fff;
 }
 
-.editor {
-  width: 100% !important;
-  height: 100vh!important;
+
+.editor-block-left{
+  float: left;
+  width: 50% !important;
+  height: 100% !important;
+}
+
+.editor-block-right{
+  float: right;
+  width: 50% !important;
+  height: 100% !important;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.btn-no-border{
+  border-radius: 0!important;
 }

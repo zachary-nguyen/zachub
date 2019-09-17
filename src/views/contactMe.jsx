@@ -4,7 +4,7 @@ function ContactMe (){
 
     return(
         <div>
-            Hi
+            Contact me
         </div>
     )
 }
