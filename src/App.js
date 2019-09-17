@@ -15,16 +15,12 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import {Switch,Route} from 'react-router';
-import {Link, BrowserRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import HomePage from './views/homePage'
 import ContactMe from './views/contactMe'
 import AboutMe from './views/aboutMe'
 import Compiler from './views/compiler'
 import Error from './views/Error/Error'
-import { createBrowserHistory } from "history";
-
-const history = createBrowserHistory()
-
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -108,7 +104,7 @@ function App() {
     const sideList = () => {
         return(
             <List>
-                {[{'All Repositories': 'zachub/'}, {'Compiler':'zachub/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                {[{'All Repositories': '/'}, {'Compiler':'/compiler'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
                     <ListItem className={'nav'}
                               component={Link}
                               to={Object.values(text)[0]}
@@ -121,9 +117,8 @@ function App() {
         )
 
     }
-  return (
+    return (
       <React.Fragment>
-          <BrowserRouter  history={history} basename={process.env.PUBLIC_URL}>
               <div className={classes.root}>
                   <AppBar className={classes.background} position="static">
                       <Toolbar>
@@ -166,15 +161,14 @@ function App() {
                   </AppBar>
               </div>
               <Switch>
-                  <Route path='*/' exact component={HomePage}/>
-                  <Route path='/about' component={AboutMe}/>
-                  <Route path='/contact' component={ContactMe}/>
-                  <Route path='/compiler' component={Compiler}/>
+                  <Route path='/' exact component={HomePage}/>
+                  <Route path='/about'  component={AboutMe}/>
+                  <Route path='/contact'  component={ContactMe}/>
+                  <Route path='/compiler'  component={Compiler}/>
                   <Route component={Error}/>
               </Switch>
-          </BrowserRouter>
       </React.Fragment>
-  );
+    );
 }
 
 export default App;

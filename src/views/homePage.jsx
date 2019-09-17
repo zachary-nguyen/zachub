@@ -10,7 +10,6 @@ function HomePage() {
         if(repositories === null){
             axios.get('https://api.github.com/users/zachary-nguyen/repos')
                 .then(result => {
-                    console.log(result.data)
                     setRepositories(result.data)
                 })
                 .catch(error =>{
@@ -31,7 +30,6 @@ function HomePage() {
                    </Grid>
                )
             }
-            console.log(tableContent)
            return tableContent;
         }
         return null
