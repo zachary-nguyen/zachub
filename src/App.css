@@ -2,14 +2,69 @@
   text-align: center;
   background-color: #edeaea;
   height: 100%;
-  z-index: 10;
 }
 
-html,body{
+body{
   height: 100%;
   width: 100%;
   background-color: #edeaea;
+}
 
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffb1ab;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+#nav-menu{
+    position: absolute;
+    float: right;
+    width: 10%;
+    height: 10%;
+    top: 4%;
+    right: 5%;
+    z-index: 10;
+    transform: translate(-50%, 0%);
+    margin-bottom: 10px;
+}
+
+#nav-menu a{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+#nav-menu a:hover{
+    color: #fff;
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background: url('assets/laptop-stock-photo-40.jpg');
+    background-size: cover;
+    padding: 15px;
+}
+
+.content{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 #content h1 {
@@ -25,40 +80,55 @@ html,body{
   color: #fff;
   font-weight: 500;
   font-size: 2.25em;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-.header {
-  color: #D8E2DC;
+#lead-down{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    bottom: 5%;
+    color: #fff;
 }
 
-.nav-button{
-  color:black;
+#lead-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
+    line-height: 1.5!important;
 }
 
-.nav:hover{
-  opacity: 0.7;
-  background-color: #ffb1ab;
+#lead-down span {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #a0cfee;
+    text-align: center;
 }
 
-.homepage{
-  height: 100%;
-}
+@keyframes pulsate {
+    0% {
+        transform: scale(1, 1);
+    }
 
-.homepage-container {
-  margin-top:  1%;
-  margin-left: 10%;
-  margin-right: 10%;
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 .table-mrg {
   margin: 10px;
 }
-
-.grid-background {
-  background-color: #edeaea;
-}
-
 
 .editor-block-left{
   float: left;
@@ -80,107 +150,20 @@ html,body{
   width: 50%;
 }
 
-.btn-no-border{
-  border-radius: 0!important;
-}
-
-.float-right{
-  padding: 10px;
-}
-
-.nav-container{
-  width: inherit;
-  text-align: center!important;
-}
-
-.nav-menu{
-  display: inline-block!important;
-  margin: 0;
-  width: 30%;
-  text-align: center!important;
-  padding-top: 10px!important;
-
-}
-
-.logo{
-  display: inline-block!important;
-  float: left;
-}
-
-.overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #ffb1ab;
-  opacity: 0.8;
-  z-index: 1;
-}
-
-.main{
-  position: relative;
-  height: 100vh;
-  min-height: 500px;
-  max-height: 1080px;
-  background: url('laptop-stock-photo-40.jpg');
-  background-size: cover;
-  padding: 15px;
-  overflow: hidden;
-}
-
-.content{
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-#lead-down{
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  bottom: 15px;
-  color: #fff;
-}
-
-#lead-down i {
-  animation: pulsate 1.5s ease;
-  animation-iteration-count: infinite;
-  padding-top: 5px;
-  line-height: 1.5!important;
-
-}
-
-#lead-down span {
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 3px solid #a0cfee;
-  text-align: center;
-}
-
 .btn-rounded-white{
   display: inline-block;
-  color: #fff;
+  color: #ffb1ab;
+  background: #fff;
   padding: 15px 25px;
   border: 3px solid #fff;
   border-radius: 30px;
   transition: .5s ease all;
   text-decoration: none;
+  margin-left: 20px ;
 }
+
 .btn-rounded-white:hover{
   border-color: #fff;
-  background: #fff;
-  color: rgba(33,125,187,0.8);
+  background: rgba(255,177,171,0.8);;
+  color: #fff;
 }
