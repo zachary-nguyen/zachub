@@ -14,13 +14,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import {Switch,Route} from 'react-router';
 import {Link} from 'react-router-dom';
-import HomePage from './views/homePage'
-import ContactMe from './views/contactMe'
-import AboutMe from './views/aboutMe'
-import Playground from './views/playground'
-import Error from './views/Error/Error'
+import Menu from '@material-ui/core/Menu';
+import MenuItem from "@material-ui/core/MenuItem";
+import Routes from "./components/Routes/routes";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -29,8 +26,11 @@ const useStyles = makeStyles(theme => ({
     background: {
         background: '#2D2675',
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
+    button: {
+        margin: theme.spacing(1),
+    },
+    input: {
+        display: 'none',
     },
     title: {
         flexGrow: 1,
@@ -38,29 +38,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
-    },
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: 'auto',
-        },
-    },
-    searchIcon: {
-        width: theme.spacing(7),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
     inputRoot: {
         color: 'inherit',
@@ -104,7 +81,7 @@ function App() {
     const sideList = () => {
         return(
             <List>
-                {[{'All Repositories': '/'}, {'Playground':'/playground'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
+                {[{'All Repositories': '/all'}, {'Playground':'/playground'}, {'About Me':'/about'}, {'Contact Me':'/contact'}].map((text) => (
                     <ListItem className={'nav'}
                               component={Link}
                               to={Object.values(text)[0]}
@@ -119,54 +96,15 @@ function App() {
     }
     return (
       <React.Fragment>
-              <div className={classes.root}>
-                  <AppBar className={classes.background} position="static">
-                      <Toolbar>
-                          <IconButton
-                              edge="start"
-                              className={classes.menuButton}
-                              color="inherit"
-                              aria-label="open drawer"
-                              onClick={toggleDrawer(true)}
-                          >
-                              <MenuIcon />
-                          </IconButton>
-                          <Drawer open={state.open} onClose={toggleDrawer( false)}>
-                              <div
-                                  className={classes.list}
-                                  role="presentation"
-                                  onClick={toggleDrawer( false)}
-                                  onKeyDown={toggleDrawer( false)}
-                              >
-                                  {sideList()}
-                              </div>
-                          </Drawer>
-                          <Typography align={'left'} className={classes.title} variant="h6" noWrap>
-                              <img src="codehublogo.png" alt="logo" height={'50'} width={'10%'}/>
-                          </Typography>
-                          <div className={classes.search}>
-                              <div className={classes.searchIcon}>
-                                  <SearchIcon />
-                              </div>
-                              <InputBase
-                                  placeholder="Search for a repository…"
-                                  classes={{
-                                      root: classes.inputRoot,
-                                      input: classes.inputInput,
-                                  }}
-                                  inputProps={{ 'aria-label': 'search' }}
-                              />
-                          </div>
-                      </Toolbar>
-                  </AppBar>
+          <Toolbar>
+              <div className={'nav-container'}>
+                  <MenuItem className={'nav-menu'} component={Link} to={'/all'}> Portfolio </MenuItem>
+                  <MenuItem className={'nav-menu'} component={Link} to={'/playground'}> Playground </MenuItem>
+                  <MenuItem className={'nav-menu'} component={Link} to={'/about'}> About </MenuItem>
+                  <MenuItem className={'nav-menu'} component={Link} to={'/contact'}> Contact </MenuItem>
               </div>
-              <Switch>
-                  <Route path='/' exact component={HomePage}/>
-                  <Route path='/about'  component={AboutMe}/>
-                  <Route path='/contact'  component={ContactMe}/>
-                  <Route path='/playground'  component={Playground}/>
-                  <Route component={Error}/>
-              </Switch>
+          </Toolbar>
+          <Routes/>
       </React.Fragment>
     );
 }

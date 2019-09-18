@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  background-color: #fff;
+  background-color: #edeaea;
   height: 100%;
 }
 
 html,body{
   height: 100%;
   width: 100%;
-  margin: 0;
-  background-color: #fff;
+  background-color: #edeaea;
+
 }
 
 .header {
@@ -39,7 +39,7 @@ html,body{
 }
 
 .grid-background {
-  background-color: #fff;
+  background-color: #edeaea;
 }
 
 
@@ -65,4 +65,30 @@ html,body{
 
 .btn-no-border{
   border-radius: 0!important;
+}
+
+.toolbar{
+  float: right!important;
+}
+
+.float-right{
+  padding: 10px;
+}
+
+.nav-container{
+  width: 100%;
+  text-align: center!important;
+}
+
+.nav-menu{
+  display: inline-block!important;
+  width: 10%!important;
+  margin: 0;
+  text-align: center!important;
+
+}
+
+.logo{
+  display: inline-block!important;
+  float: left;
 }
