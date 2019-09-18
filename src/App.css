@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #edeaea;
   height: 100%;
+  z-index: 10;
 }
 
 html,body{
@@ -9,6 +10,22 @@ html,body{
   width: 100%;
   background-color: #edeaea;
 
+}
+
+#content h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.9em;
+}
+
+#content h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.25em;
+  margin-bottom: 15px;
 }
 
 .header {
@@ -67,28 +84,84 @@ html,body{
   border-radius: 0!important;
 }
 
-.toolbar{
-  float: right!important;
-}
-
 .float-right{
   padding: 10px;
 }
 
 .nav-container{
-  width: 100%;
+  width: inherit;
   text-align: center!important;
 }
 
 .nav-menu{
   display: inline-block!important;
-  width: 10%!important;
   margin: 0;
+  width: 30%;
   text-align: center!important;
+  padding-top: 10px!important;
 
 }
 
 .logo{
   display: inline-block!important;
   float: left;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffb1ab;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.main{
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 1080px;
+  background: url('laptop-stock-photo-40.jpg');
+  background-size: cover;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.content{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lead-down{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  bottom: 15px;
+  color: #fff;
+}
+
+.btn-rounded-white{
+  display: inline-block;
+  color: #fff;
+  padding: 15px 25px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  transition: .5s ease all;
+  text-decoration: none;
+}
+.btn-rounded-white:hover{
+  border-color: #fff;
+  background: #fff;
+  color: rgba(33,125,187,0.8);
 }
