@@ -1,12 +1,17 @@
 import React from 'react'
 import Scroll from 'react-scroll';
 import Navigation from '../../components/Navigation/navigation'
-import AllRepositories from "../AllRepositories/allRepositories";
+import AboutMe from "../AboutMe/aboutMe";
+import Skills from "../Skills/skills";
 
 const Home = () => {
 
     const scrollToNext = () => {
         Scroll.animateScroll.scrollTo(document.getElementById('main').offsetHeight,{smooth: true});
+    };
+
+    const scrollToTop = () => {
+        Scroll.animateScroll.scrollToTop({smooth:true});
     };
 
     return(
@@ -16,7 +21,7 @@ const Home = () => {
                 <div id={'content'} className={'content'}>
                     <h1>Zachary Nguyen</h1>
                     <a href={'#'} onClick={scrollToNext} className="btn-rounded-white">About Me</a>
-                    <a href="../../assets/ZacharyNguyenResume2020.pdf" download className="btn-rounded-white">Download CV</a>
+                    <a href="./public/ZacharyNguyenResume2020.pdf" download className="btn-rounded-white">Download CV</a>
                 </div>
                 <div className={'overlay'}/>
                 <div id="lead-down">
@@ -25,7 +30,14 @@ const Home = () => {
                 </span>
                 </div>
             </div>
-            <AllRepositories/>
+            <AboutMe/>
+            <Skills/>
+
+            <div className="top">
+                <span id="to-top" onClick={scrollToTop}>
+                    <i className="fa fa-chevron-up" aria-hidden="true"></i>
+                </span>
+            </div>
         </React.Fragment>
     )
 };
