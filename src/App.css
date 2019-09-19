@@ -74,6 +74,7 @@ body{
   text-transform: uppercase;
   letter-spacing: 0.05em;
   line-height: 0.9em;
+  margin-bottom: 0;
 }
 
 #content h2 {
@@ -159,7 +160,7 @@ body{
   border-radius: 30px;
   transition: .5s ease all;
   text-decoration: none;
-  margin-left: 20px ;
+  margin-left: 25px ;
 }
 
 .btn-rounded-white:hover{
