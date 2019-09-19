@@ -59,8 +59,25 @@ body{
     font-weight: lighter;
 }
 
-#nav-menu a:hover{
-    color: #fff;
+.nav-menu-a:hover{
+    color: #fff!important;
+}
+
+.nav-menu-a:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    max-width: 50%;
+}
+
+.nav-menu-a:hover:after {
+    width: 50%;
+    left: 0;
 }
 
 .social a{
@@ -68,6 +85,11 @@ body{
     float: left;
     margin-right: 10px;
 }
+
+.social a:hover{
+    color: #fff!important;
+}
+
 .main{
     position: relative;
     height: 100vh;
@@ -121,7 +143,7 @@ body{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #a0cfee;
+    border: 3px solid rgba(255,177,171,0.8);
     text-align: center;
 }
 
@@ -133,7 +155,7 @@ body{
     border: 3px solid #fff;
     border-radius: 30px;
     transition: .5s ease all;
-    text-decoration: none;
+    text-decoration: none!important;
     margin-left: 20px ;
     margin-right: 5px;
     margin-top: 20px;
@@ -141,7 +163,7 @@ body{
 
 .btn-rounded-white:hover{
     border-color: #fff;
-    background: rgba(255,177,171,0.8);;
+    background: rgba(255,177,171,0.8);
     color: #fff;
 }
 
