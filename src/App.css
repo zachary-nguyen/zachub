@@ -60,7 +60,7 @@ body{
 }
 
 .nav-menu-a:hover{
-    color: #fff;
+    color: #fff!important;
 }
 
 .nav-menu-a:after {
@@ -155,7 +155,7 @@ body{
     border: 3px solid #fff;
     border-radius: 30px;
     transition: .5s ease all;
-    text-decoration: none;
+    text-decoration: none!important;
     margin-left: 20px ;
     margin-right: 5px;
     margin-top: 20px;
