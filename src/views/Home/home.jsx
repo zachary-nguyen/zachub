@@ -18,7 +18,7 @@ const Home = () => {
         <React.Fragment>
             <div id={'main'} className={'main'}>
                 <Navigation/>
-                <div id={'content'} className={'content'}>
+                <div id={'content'}>
                     <h1>Zachary Nguyen</h1>
                     <a href={'#'} onClick={scrollToNext} className="btn-rounded-white">About Me</a>
                     <a href="./public/ZacharyNguyenResume2020.pdf" download className="btn-rounded-white">Download CV</a>

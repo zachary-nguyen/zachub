@@ -100,7 +100,7 @@ body{
     padding: 15px;
 }
 
-.content{
+#content{
     position: absolute;
     z-index: 10;
     top: 50%;
@@ -252,3 +252,78 @@ body{
     cursor: default;
     font-size: 1.2em;
 }
+
+/*
+  Responsive
+ */
+
+@media only screen and (max-width : 992px) {
+
+    #lead {
+        height: auto;
+        min-height: auto;
+        max-height: auto;
+        padding: 100px 15px;
+    }
+
+    #content {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: 50%;
+    }
+
+    #nav-menu {
+        position: relative;
+        transform: translate(-300%,0%);
+        top: 5%;
+    }
+
+    #nav-menu a{
+        position: relative;
+        top: 5%;
+    }
+
+    #content h1 {
+        font-size: 3em;
+    }
+
+
+    #about {
+        text-align: center;
+    }
+    #about p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    #content h1 {
+        font-size: 2em;
+    }
+
+    #content h2 {
+        font-size: 1.3em;
+    }
+
+    #content a {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+    #content h1 {
+        font-size: 1.5em;
+    }
+    #content h2 {
+        font-size: 1em;
+    }
+
+    #content a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+}
+
