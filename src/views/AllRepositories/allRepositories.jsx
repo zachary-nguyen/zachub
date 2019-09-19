@@ -1,9 +1,9 @@
-import RepositoryCard from "../components/repositoryCard";
+import RepositoryCard from "../../components/repositoryCard";
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 import axios from 'axios';
 
-function HomePage() {
+function AllRepositories() {
     const [repositories, setRepositories] = React.useState(null);
 
     React.useEffect(() => {
@@ -48,4 +48,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default AllRepositories
