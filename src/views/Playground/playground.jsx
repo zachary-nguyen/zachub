@@ -1,6 +1,5 @@
 import React from 'react'
 import AceEditor from "react-ace";
-import brace from 'brace';
 import 'brace/mode/javascript';
 import 'brace/theme/monokai';
 import Button from '@material-ui/core/Button'

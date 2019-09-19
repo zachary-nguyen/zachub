@@ -9,7 +9,6 @@ const App = () => {
     return (
       <React.Fragment>
           <Routes/>
-          <AllRepositories/>
       </React.Fragment>
     );
 };
