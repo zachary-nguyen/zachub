@@ -287,7 +287,7 @@ body{
     #content {
         position: relative;
         transform: none;
-        left: auto;
+        left: 5%;
         top: 50%;
     }
 
@@ -328,6 +328,17 @@ body{
         float: right;
         z-index: 10;
     }
+
+    #content h1{
+        position: relative;
+    }
+
+    .btn-rounded-white {
+        position: relative;
+        display: block;
+        width: 50%;
+        left: 15%;
+    }
 }
 
 @media only screen and (max-width : 480px) {
@@ -335,13 +346,10 @@ body{
     #content h1 {
         font-size: 1.5em;
     }
-    #content h2 {
-        font-size: 1em;
-    }
 
     #content a {
         font-size: 0.9em;
-        padding: 5px 10px;
+        padding: 5px 20px;
     }
 }
 
