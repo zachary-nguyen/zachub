@@ -1,15 +1,29 @@
+/*
+ ---- GLOBAL STYLES ----
+ */
 .App {
   text-align: center;
-  background-color: #edeaea;
+  background-color: #fff;
   height: 100%;
 }
 
 body{
   height: 100%;
   width: 100%;
-  background-color: #edeaea;
+  background-color: #fff;
 }
 
+.heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+/*
+  ----- HOME STYLE-----
+ */
 .overlay {
     position: absolute;
     height: 100%;
@@ -67,7 +81,7 @@ body{
 .content{
     position: absolute;
     z-index: 10;
-    top: 47%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -98,7 +112,6 @@ body{
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
     padding-top: 5px;
-    line-height: 1.5!important;
 }
 
 #lead-down span {
@@ -110,6 +123,46 @@ body{
     border-radius: 50%;
     border: 3px solid #a0cfee;
     text-align: center;
+}
+
+.btn-rounded-white{
+    display: inline-block;
+    color: #ffb1ab;
+    background: #fff;
+    padding: 15px 25px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    transition: .5s ease all;
+    text-decoration: none;
+    margin-left: 20px ;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.btn-rounded-white:hover{
+    border-color: #fff;
+    background: rgba(255,177,171,0.8);;
+    color: #fff;
+}
+
+.top {
+    text-align: center;
+}
+
+.top i{
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+}
+
+.top span {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 10px auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,177,171,0.35);
+    text-align:center;
 }
 
 @keyframes pulsate {
@@ -126,45 +179,54 @@ body{
     }
 }
 
-.table-mrg {
-  margin: 10px;
+/*
+ ---- ABOUT STYLE ----
+ */
+#about {
+    padding: 75px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    background: #fff;
 }
 
-.editor-block-left{
-  float: left;
-  width: 50% !important;
-  height: 100% !important;
+#about h2{
+    color: #374054;
+    border-bottom: 1px solid black ;
 }
 
-.editor-block-right{
-  float: right;
-  width: 50% !important;
-  height: 100% !important;
+#about p{
+    color: black;
+    margin: 0;
 }
 
-.full-width{
-  width: 100%;
+/*
+ ---- SKILL STYLES ----
+ */
+
+#skills {
+    padding: 50px 15px;
+    text-align: center;
 }
 
-.half-width {
-  width: 50%;
+#skills h2 {
+    color: #374054;
+    margin-bottom: 50px;
+    border-bottom: 1px solid black ;
 }
 
-.btn-rounded-white{
-  display: inline-block;
-  color: #ffb1ab;
-  background: #fff;
-  padding: 15px 25px;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  transition: .5s ease all;
-  text-decoration: none;
-  margin-left: 20px ;
-  margin-right: 5px;
+#skills ul{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
 }
 
-.btn-rounded-white:hover{
-  border-color: #fff;
-  background: rgba(255,177,171,0.8);;
-  color: #fff;
+#skills li{
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #374054;
+    background: rgba(255,177,171,0.35);
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
 }
