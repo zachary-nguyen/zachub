@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "title": "Full-Stack Developer",
+      "company": "Statistic Canada",
+      "location": "Ottawa, ON",
+      "date" : "May 2018 - Present",
+      "website" : "https://statisticscanada.gc",
+      "description": "Place holder"
+    },
+    {
+      "title": "General Assembler",
+      "company": "Scientrex Trace",
+      "location": "Ottawa, ON",
+      "date" : "May 2017 - August 2017",
+      "website" : "https://scientrextrace.com",
+      "description": "Place holder"
+    },
+    {
+      "title": "Racquet Stringer",
+      "company": "Zac Stringing",
+      "location": "Ottawa, ON",
+      "date" : "May 2016 - May 2019",
+      "website" : "",
+      "description": "Place holder"
+    }
+  ]
+}

@@ -1,50 +1,43 @@
-import RepositoryCard from "../../components/repositoryCard";
-import React from "react";
-import Grid from '@material-ui/core/Grid';
+import React, {useEffect} from "react";
 import axios from 'axios';
+import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component/dist-es6";
+import WorkIcon from "@material-ui/icons/Work";
+import * as experience from "../../assets/experience";
 
 function AllRepositories() {
     const [repositories, setRepositories] = React.useState(null);
 
-    React.useEffect(() => {
-        if(repositories === null){
+    useEffect( ()  => {
             axios.get('https://api.github.com/users/zachary-nguyen/repos')
-                .then(result => {
-                    setRepositories(result.data)
-                })
-                .catch(error =>{
-                    console.log(error)
-                })
-        }
-    },[])
+            .then(result => result.data)
+            .then(data => setRepositories(data))
+            .catch(err => console.log(err));
+    },[]);
 
-    const generateTable  = () => {
-        let tableContent = []
-        if(repositories){
-            for(let i=0; i< repositories.length; i++){
-               tableContent.push(
-                   <Grid key={repositories[i].id} item xs>
-                      <RepositoryCard key={repositories[i].id}
-                                      repository={repositories[i].name}
-                                      description={repositories[i].description}/>
-                   </Grid>
-               )
-            }
-           return tableContent;
-        }
-        return null
-    }
+    //@returns {function}
     return(
-        <div className={'homepage'}>
-                <Grid container
-                      alignItems="stretch"
-                      spacing={0}
-                      className="grid-background">
-                    {generateTable()}
-                </Grid>
-
-        </div>
-
+        repositories === null ? null :
+        <React.Fragment>
+            <h1> Portfolio </h1>
+            <VerticalTimeline>
+                {repositories.map((repo, i) => (
+                    <VerticalTimelineElement
+                        contentStyle={{ background: 'rgba(255, 177,171,0.7)', color: '#fff' }}
+                        contentArrowStyle={{ borderRight: '7px solid  rgb(255, 177, 171)' }}
+                        date={''}
+                        iconStyle={{ background: 'rgb(255, 177, 171)', color: '#fff' }}
+                        icon={<WorkIcon/>}
+                        key={i}
+                    >
+                        <h3 className="vertical-timeline-element-title">{repo.name}</h3>
+                        <h4 className="vertical-timeline-element-subtitle">{'Ottawa'}</h4>
+                        <p>
+                            {repo.description}
+                        </p>
+                    </VerticalTimelineElement>
+                ))}
+            </VerticalTimeline>
+        </React.Fragment>
     )
 }
 
