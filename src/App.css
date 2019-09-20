@@ -82,7 +82,6 @@ body{
 }
 
 .nav-menu-a:after {
-    background: none repeat scroll 0 0 transparent;
     content: "";
     display: block;
     height: 2px;
@@ -90,11 +89,10 @@ body{
     background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
-    max-width: 50%;
 }
 
 .nav-menu-a:hover:after {
-    width: 50%;
+    width: 75%;
     left: 0;
 }
 
