@@ -33,6 +33,7 @@ const Skills = () => {
                 <li>Jenkins</li>
                 <li>Webpack</li>
                 <li>SOAP</li>
+                <li>ESLint</li>
             </ul>
         </div>
     );

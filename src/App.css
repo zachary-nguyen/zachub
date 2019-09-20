@@ -3,7 +3,7 @@
  */
 .App {
   text-align: center;
-  background-color: #fff;
+  background: #fff;
   height: 100%;
 }
 
@@ -18,7 +18,7 @@ body{
     display: inline-block;
     font-size: 2em;
     font-weight: 300;
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0px;
 }
 
 /*
@@ -185,6 +185,7 @@ body{
 
 .top {
     text-align: center;
+    background: #fafafa;
 }
 
 .top i{
@@ -195,7 +196,7 @@ body{
 .top span {
     cursor: pointer;
     display: block;
-    margin: 15px auto 10px auto;
+    margin: 0 auto 10px auto;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -243,6 +244,8 @@ body{
 #skills {
     padding: 50px 15px;
     text-align: center;
+    border-bottom: 1px solid #dcd9d9;
+    background: #fff;
 }
 
 #skills h2 {
@@ -263,10 +266,27 @@ body{
     margin: 7px;
     padding: 5px 10px;
     color: #374054;
-    background: rgba(255,177,171,0.35);
+    background: rgba(255,177,171,0.6);
     list-style: none;
     cursor: default;
     font-size: 1.2em;
+}
+
+/*
+ -- TIMELINE --
+ */
+.vertical-timeline::before {
+    background: rgba(255,177,171,0.5)!important;
+}
+
+#timeline{
+    background: #fafafa;
+}
+
+#timeline h2{
+    color: #374054;
+    margin-bottom: 50px;
+    border-bottom: 1px solid black ;
 }
 
 /*

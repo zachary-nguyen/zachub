@@ -3,6 +3,7 @@ import Scroll from 'react-scroll';
 import Navigation from '../../components/Navigation/navigation'
 import AboutMe from "../AboutMe/aboutMe";
 import Skills from "../Skills/skills";
+import Timeline from "../../components/Timeline/timeline";
 
 const Home = () => {
 
@@ -21,7 +22,7 @@ const Home = () => {
                 <div id={'content'}>
                     <h1>Zachary Nguyen</h1>
                     <a href={'#'} onClick={scrollToNext} className="btn-rounded-white">About Me</a>
-                    <a href="./ZacharyNguyenResume2020.pdf" download className="btn-rounded-white">Download CV</a>
+                    <a href="./ZacharyNguyenResume.pdf" download className="btn-rounded-white">Download CV</a>
                 </div>
                 <div className={'overlay'}/>
                 <div id="lead-down">
@@ -32,6 +33,7 @@ const Home = () => {
             </div>
             <AboutMe/>
             <Skills/>
+            <Timeline/>
             <div className="top">
                 <span id="to-top" onClick={scrollToTop}>
                     <i className="fa fa-chevron-up" aria-hidden="true"></i>
