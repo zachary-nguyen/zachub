@@ -32,7 +32,6 @@ const Home = () => {
             </div>
             <AboutMe/>
             <Skills/>
-
             <div className="top">
                 <span id="to-top" onClick={scrollToTop}>
                     <i className="fa fa-chevron-up" aria-hidden="true"></i>
