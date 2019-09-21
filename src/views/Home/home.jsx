@@ -3,10 +3,11 @@ import Scroll from 'react-scroll';
 import Navigation from '../../components/Navigation/navigation'
 import AboutMe from "../AboutMe/aboutMe";
 import Skills from "../Skills/skills";
-import Timeline from "../../components/Timeline/timeline";
 import ContentTabs from "../../components/ContentTabs/contentTabs";
 
 const Home = () => {
+
+    const [selectedTab,setSelectedTab] = React.useState(1);
 
     const scrollToNext = () => {
         Scroll.animateScroll.scrollTo(document.getElementById('main').offsetHeight,{smooth: true});
@@ -16,10 +17,14 @@ const Home = () => {
         Scroll.animateScroll.scrollToTop({smooth:true});
     };
 
+    const handleMenuChange = (newValue) => {
+        setSelectedTab(newValue);
+    };
+
     return(
         <React.Fragment>
             <div id={'main'} className={'main'}>
-                <Navigation/>
+                <Navigation handleMenuChange={handleMenuChange}/>
                 <div id={'content'}>
                     <h1>Zachary Nguyen</h1>
                     <a href={'#'} onClick={scrollToNext} className="btn-rounded-white">About Me</a>
@@ -34,7 +39,7 @@ const Home = () => {
             </div>
             <AboutMe/>
             <Skills/>
-            <ContentTabs/>
+            <ContentTabs selectedTab={selectedTab} handleMenuChange={handleMenuChange}/>
             {/*<Timeline/>*/}
             <div className="top">
                 <span id="to-top" onClick={scrollToTop}>

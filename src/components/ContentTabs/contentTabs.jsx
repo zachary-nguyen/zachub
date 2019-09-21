@@ -31,20 +31,19 @@ function a11yProps(index) {
 }
 
 
-const ContentTabs = () => {
+const ContentTabs = (props) => {
 
-    const [value, setValue] = React.useState(0);
 
-    function handleChange(event, newValue) {
-        setValue(newValue);
+    function handleMenuChange(event, newValue) {
+        props.handleMenuChange(newValue);
     }
 
     return (
         <React.Fragment>
             <Tabs
                 id={'portfolio'}
-                value={value}
-                onChange={handleChange}
+                value={props.selectedTab}
+                onChange={handleMenuChange}
                 indicatorColor="secondary"
                 centered
                 textColor="secondary"
@@ -53,13 +52,13 @@ const ContentTabs = () => {
                 <Tab label="Portfolio" {...a11yProps(1)} />
                 <Tab label="Contact" {...a11yProps(2)} />
             </Tabs>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={props.selectedTab} index={0}>
                 <Timeline/>
             </TabPanel>
-            <TabPanel value={value} index={1}>
+            <TabPanel value={props.selectedTab} index={1}>
                 <Portfolio/>
             </TabPanel>
-            <TabPanel value={value} index={2}>
+            <TabPanel value={props.selectedTab} index={2}>
                 <Portfolio/>
             </TabPanel>
         </React.Fragment>

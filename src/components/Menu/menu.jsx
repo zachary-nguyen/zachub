@@ -8,7 +8,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 
-const Menu = () => {
+
+const Menu = (props) => {
 
     const [state, setState] = React.useState({
         open: false,
@@ -21,7 +22,9 @@ const Menu = () => {
         setState({ ...state, open: open });
     };
 
-    const scrollToElement = () => {
+    const scrollToElement = (tab) => {
+        const s = tab.currentTarget.name
+        props.handleMenuChange(s,true)
         setState({...state,open: false})
     };
 
@@ -40,9 +43,20 @@ const Menu = () => {
                         <ListItem className={'hamburger-item'}
                                   to={'portfolio'}
                                   component={Link}
+                                  name={0}
                                   onClick={scrollToElement}
+                                  ignoreCancelEvents
                                   smooth={true}>
-                            <ListItemText className={'nav-button'} primary={'Portfolio'}/>
+                            <ListItemText className={'nav-button'} primary={'Experience'}/>
+                        </ListItem>
+                        <ListItem className={'hamburger-item'}
+                                  to={'portfolio'}
+                                  name={1}
+                                  component={Link}
+                                  onClick={scrollToElement}
+                                  ignoreCancelEvents
+                                  smooth={true}>
+                            <ListItemText name={1} className={'nav-button'} primary={'Portfolio'}/>
                         </ListItem>
                         <ListItem className={'hamburger-item'}
                                   component={RouterLink}
@@ -52,9 +66,11 @@ const Menu = () => {
                         <ListItem className={'hamburger-item'}
                                   to={'portfolio'}
                                   component={Link}
+                                  name={2}
                                   onClick={scrollToElement}
+                                  ignoreCancelEvents
                                   smooth={true}>
-                            <ListItemText className={'nav-button'} primary={'Contact'}/>
+                            <ListItemText name={2} className={'nav-button'} primary={'Contact'}/>
                         </ListItem>
                     </List>
                 </div>
