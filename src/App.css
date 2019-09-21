@@ -69,12 +69,18 @@ body{
 
 .hamburger-drawer{
     height: 100vh!important;
+    z-index: 10;
 }
 
 .hamburger-item{
     text-align: center!important;
     text-decoration: none!important;
-    color: #ffb1ab;
+    color: #ffb1ab!important;
+}
+
+.hamburger-item:hover{
+    color: black!important;
+    cursor: pointer;
 }
 
 .hamburger-content{
@@ -266,7 +272,7 @@ body{
  */
 
 #skills {
-    padding: 50px 15px;
+    padding: 20px 15px;
     text-align: center;
     border-bottom: 1px solid #dcd9d9;
     background: #fff;
@@ -274,8 +280,9 @@ body{
 
 #skills h2 {
     color: #374054;
-    margin-bottom: 50px;
     border-bottom: 1px solid black ;
+    margin: 15px 0 30px 0;
+
 }
 
 #skills ul{
