@@ -42,6 +42,7 @@ const ContentTabs = () => {
     return (
         <React.Fragment>
             <Tabs
+                id={'portfolio'}
                 value={value}
                 onChange={handleChange}
                 indicatorColor="secondary"

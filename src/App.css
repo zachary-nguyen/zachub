@@ -98,6 +98,7 @@ body{
     color: black;
     margin-top: 10px;
     font-weight: lighter;
+    cursor: pointer;
 }
 
 .nav-menu-a:hover{
