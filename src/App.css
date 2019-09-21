@@ -326,7 +326,7 @@ body{
         position: relative;
         transform: none;
         left: 5%;
-        top: 50%;
+        top: 40%;
     }
 
     #nav-menu a{
@@ -349,6 +349,10 @@ body{
 
 @media only screen and (max-width : 768px) {
 
+    #content {
+        top: 40%;
+    }
+
     #content h1 {
         font-size: 2em;
     }
@@ -365,6 +369,10 @@ body{
         display: block;
         float: right;
         z-index: 10;
+    }
+
+    #content {
+        top: 40%;
     }
 
     #content h1{
