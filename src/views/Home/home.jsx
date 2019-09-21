@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation/navigation'
 import AboutMe from "../AboutMe/aboutMe";
 import Skills from "../Skills/skills";
 import Timeline from "../../components/Timeline/timeline";
+import ContentTabs from "../../components/ContentTabs/contentTabs";
 
 const Home = () => {
 
@@ -33,7 +34,8 @@ const Home = () => {
             </div>
             <AboutMe/>
             <Skills/>
-            <Timeline/>
+            <ContentTabs/>
+            {/*<Timeline/>*/}
             <div className="top">
                 <span id="to-top" onClick={scrollToTop}>
                     <i className="fa fa-chevron-up" aria-hidden="true"></i>
