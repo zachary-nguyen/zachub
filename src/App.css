@@ -1,25 +1,54 @@
 /*
  ---- GLOBAL STYLES ----
  */
+
+:root{
+    --text: white;
+}
+
+.white-text{
+    color: white!important;
+}
+
 .App {
   text-align: center;
-  background: #fff;
   height: 100%;
 }
 
 body{
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  position: relative;
+  background-image: url('assets/nightcity.jpg')!important;
+  background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heading {
     position: relative;
     display: inline-block;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 400;
     margin: 30px 0 30px 0px;
     border-bottom: 1px solid black;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+.heading-white{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 30px 0 30px 0px;
+    border-bottom: 1px solid white;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
@@ -55,8 +84,8 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(255,177,171,1),rgba(255,177,171,0));
-    opacity: 0.35;
+    /*background: linear-gradient(to bottom, rgba(21,97,173,1),rgba(21,97,173,0.3));*/
+    /*opacity: 0.35;*/
     z-index: 1;
 }
 
@@ -141,9 +170,18 @@ body{
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url('assets/laptop-stock-photo-40.jpg');
+    background-image: url('assets/streetbackground.jpg');
     background-size: cover;
     padding: 15px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#portfolio{
+    background-color: transparent;
 }
 
 #content{
@@ -189,14 +227,14 @@ body{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid rgba(255,177,171,0.8);
+    border: 3px solid white;
     text-align: center;
 }
 
 .btn-rounded-white{
     display: inline-block;
-    color: #ffb1ab;
-    background: #fff;
+    color: white;
+    background: rgba(255,177,171,1);
     padding: 15px 25px;
     border: 3px solid #fff;
     border-radius: 30px;
@@ -215,7 +253,8 @@ body{
 
 .top {
     text-align: center;
-    background: #fff;
+    background: var(--background);
+    color: white;
 }
 
 .top i{
@@ -230,7 +269,7 @@ body{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid rgba(255,177,171,0.35);
+    border: 3px solid white;
     text-align:center;
 }
 
@@ -275,12 +314,12 @@ body{
     padding: 20px 15px;
     text-align: center;
     border-bottom: 1px solid #dcd9d9;
-    background: #fff;
+    background: white;
 }
 
 #skills h2 {
-    color: #374054;
-    border-bottom: 1px solid black ;
+    color: black;
+    border-bottom: 1px solid black;
     margin: 15px 0 30px 0;
 
 }
@@ -297,10 +336,12 @@ body{
     margin: 7px;
     padding: 5px 10px;
     color: #374054;
-    background: rgba(255,177,171,0.6);
+    background: whitesmoke;
     list-style: none;
     cursor: default;
     font-size: 1.2em;
+    border: 1px solid black;
+    box-shadow: 2px 5px 15px #888888
 }
 
 /*
@@ -310,11 +351,10 @@ body{
     background: rgba(255,177,171,0.5)!important;
 }
 
-
 #timeline h2{
-    color: #374054;
+    color: var(--text);
     margin-bottom: 50px;
-    border-bottom: 1px solid black ;
+    border-bottom: 1px solid white ;
 }
 
 /*

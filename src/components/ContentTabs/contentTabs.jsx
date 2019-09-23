@@ -46,13 +46,12 @@ const ContentTabs = (props) => {
                 onChange={handleMenuChange}
                 indicatorColor="secondary"
                 centered
-                textColor="secondary"
             >
-                <Tab label="Experience" {...a11yProps(0)} />
-                <Tab label="Portfolio" {...a11yProps(1)} />
-                <Tab label="Contact" {...a11yProps(2)} />
+                <Tab className={'white-text'} label="Experience" {...a11yProps(0)} />
+                <Tab className={'white-text'} label="Portfolio" {...a11yProps(1)} />
+                <Tab className={'white-text'} label="Contact" {...a11yProps(2)} />
             </Tabs>
-            <TabPanel value={props.selectedTab} index={0}>
+            <TabPanel className={'portfolio'} value={props.selectedTab} index={0}>
                 <Timeline/>
             </TabPanel>
             <TabPanel value={props.selectedTab} index={1}>

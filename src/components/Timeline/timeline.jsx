@@ -12,18 +12,20 @@ const Timeline = () =>{
                 <VerticalTimeline>
                     {experience.jobs.map((job, i) => (
                         <VerticalTimelineElement
-                            contentStyle={{ background: 'rgba(255, 177,171,0.7)', color: '#fff' }}
-                            contentArrowStyle={{ borderRight: '7px solid  rgb(255, 177, 171)' }}
+                            contentStyle={{border: '2px solid white', background: '#77A6B6', color: '#fff',boxShadow: '0px 2px 10px #77A6B6'}}
+                            contentArrowStyle={{ borderRight: '7px solid white' }}
                             date={job.date}
-                            iconStyle={{ background: 'rgb(255, 177, 171)', color: '#fff' }}
+                            iconStyle={{ background: '#e27d60', color: '#fff' }}
                             icon={<WorkIcon />}
                             key={i}
                         >
                             <h3 className="vertical-timeline-element-title">{job.title}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{job.location}</h4>
-                            <p>
-                                {job.description}
-                            </p>
+                            <p><i>{job.company}</i></p>
+                            <p>{job.description1}</p>
+                            <p>{job.description2}</p>
+                            <p>{job.description3}</p>
+                            <p>{job.description4}</p>
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline>

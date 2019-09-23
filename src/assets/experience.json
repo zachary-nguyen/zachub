@@ -6,7 +6,11 @@
       "location": "Ottawa, ON",
       "date" : "May 2018 - Present",
       "website" : "https://statisticscanada.gc",
-      "description": "Place holder"
+      "description1": "• Working as a full-stack developer on a web application used by all collection staff throughout Statistics Canada.",
+      "description2": "• Worked with two other developers to add ReactJs and GraphQL into the napplication by setting up the necessary configurations and infrastructure.",
+      "description3": "• Lead developer for a new dashboard feature. Responsible of managing the\ndevelopment process for other developers and communication with clients.\n",
+      "description4": "• Successfully got a proof of concept approved to integrate automated testing\nas part of the development process using Cypress framework.\n"
+
     },
     {
       "title": "General Assembler",
@@ -14,7 +18,10 @@
       "location": "Ottawa, ON",
       "date" : "May 2017 - August 2017",
       "website" : "https://scientrextrace.com",
-      "description": "Place holder"
+      "description1": "• Assembled Luminol cells and TNT pens for explosive and narcotic detection\nunits.\n",
+      "description2": "• Prepared various narcotic samples for testing by chemical engineers.\n",
+      "description3": "",
+      "description4": ""
     },
     {
       "title": "Racquet Stringer",
@@ -22,7 +29,10 @@
       "location": "Ottawa, ON",
       "date" : "May 2016 - May 2019",
       "website" : "",
-      "description": "Place holder"
+      "description1": "• Started a racquet stringing business at one tennis club and expanded to\nthree clubs throughout the city.\n",
+      "description2": "• Self-taught stringer.\n",
+      "description3": "",
+      "description4": ""
     }
   ]
 }
