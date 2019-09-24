@@ -2,9 +2,10 @@ import React from 'react';
 import Scroll from 'react-scroll';
 import Navigation from '../../components/Navigation/navigation';
 import AboutMe from '../../components/AboutMe/aboutMe';
-import Skills from '../Skills/skills';
+import Skills from '../../components/Skills/skills';
 import ContentTabs from '../../components/ContentTabs/contentTabs';
 import Language from '../../components/Language/Language';
+import PropTypes from 'prop-types';
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = React.useState(1);
@@ -39,6 +40,10 @@ const Home = () => {
       <ContentTabs selectedTab={selectedTab} handleMenuChange={handleMenuChange}/>
     </React.Fragment>
   );
+};
+
+Home.propTypes = {
+  handleMenuChange: PropTypes.function
 };
 
 export default Home;
