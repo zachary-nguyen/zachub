@@ -1,5 +1,4 @@
 import React from 'react';
-import 'url-loader';
 import PropTypes from 'prop-types';
 
 const STATUS = {

@@ -27,7 +27,6 @@ const Home = () => {
           <a href={'#'} onClick={scrollToNext} className="btn-rounded-white">About Me</a>
           <a href="./ZacharyNguyenResume.pdf" download className="btn-rounded-white">Download CV</a>
         </div>
-        {/* <div className={'overlay'}/> */}
         <div id="lead-down">
           <span onClick={scrollToNext}>
             <i className={'fa fa-chevron-down'} aria-hidden="true"/>

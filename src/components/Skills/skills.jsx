@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
-import * as skills from './skills';
+import * as Languages from '../../assets/skills';
 
 const Skill = (props) => {
 
   const [flip,setFlip] = React.useState(false);
 
   const onMouseOver = () =>{
-    console.log(flip);
     setFlip(!flip);
   };
 
@@ -17,7 +16,7 @@ const Skill = (props) => {
         <div onMouseOver={onMouseOver} className={'skill-front'} key={'front'}>{props.name}</div>
         <div onMouseOver={onMouseOver} className={'skill-back'} key={'back'}>{props.name}</div>
       </ReactCardFlip>
-  )
+  );
 };
 
 
@@ -26,7 +25,7 @@ const Skills = () => {
     <section id="skills">
       <h2 className="heading">Skills</h2>
       <ul>
-        {skills.skills.map((language,i)=>(
+        {Languages.skills.map((language,i)=>(
             <li key={i}>
                 <Skill key={i} name={language}/>
             </li>
@@ -37,6 +36,7 @@ const Skills = () => {
 };
 
 Skill.propTypes = {
-  name: PropTypes.String
+  name: PropTypes.object
 };
+
 export default Skills;
