@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component/dist-es6";
-import ReactIcon from 'react-devicon/react/original'
+import {FaReact, FaJava, FaJs, FaHtml5, FaPython} from 'react-icons/fa';
 import Chip from '@material-ui/core/Chip';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -37,7 +37,8 @@ const Portfolio = () => {
 
     return(
         <React.Fragment>
-            <h1 className={'heading-white'}> Portfolio </h1>
+            <h1 className={'heading'}> Portfolio </h1>
+            <p> Projects I have created or contributed to! </p>
             {repositories ?
                 <VerticalTimeline>
                     {repositories.map((repo, i) => (
@@ -45,16 +46,17 @@ const Portfolio = () => {
                             contentStyle={{border: '2px solid white', background: 'white', color: 'black',boxShadow: '0px 2px 10px #77A6B6'}}
                             contentArrowStyle={{borderRight: '7px solid  white'}}
                             date={''}
-                            iconStyle={{background: '#e27d60', color: '#fff'}}
-                            icon={<ReactIcon/>}
+                            iconStyle={{background: '#00d8ff', color: '#fff'}}
+                            icon={<FaJava/>}
                             key={i}
                         >
                             <h3 className="vertical-timeline-element-title">{repo.name}</h3>
-                            <h4 className="vertical-timeline-element-subtitle">{'Ottawa'}</h4>
                             <p className={'desc-text'}>
                                 {repo.description}
                             </p>
                             <Technology repo={repo.name}/>
+                            <br/>
+                            <a href={'https://github.com/zachary-nguyen/'+ repo.name} target={'_blank'} className="btn-rounded-white">View Source</a>
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline> : null

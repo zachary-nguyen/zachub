@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation/navigation'
 import AboutMe from "../../components/AboutMe/aboutMe";
 import Skills from "../Skills/skills";
 import ContentTabs from "../../components/ContentTabs/contentTabs";
+import Language from "../../components/Language/Language";
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
 
     return(
         <React.Fragment>
-            <div id={'main'} className={'main'}>
+            <section id={'main'} className={'main'}>
                 <Navigation handleMenuChange={handleMenuChange}/>
                 <div id={'content'}>
                     <h1>Zachary Nguyen</h1>
@@ -32,8 +33,9 @@ const Home = () => {
                     <i className={'fa fa-chevron-down'} aria-hidden="true"/>
                 </span>
                 </div>
-            </div>
+            </section>
             <AboutMe/>
+            <Language/>
             <Skills/>
             <ContentTabs selectedTab={selectedTab} handleMenuChange={handleMenuChange}/>
         </React.Fragment>

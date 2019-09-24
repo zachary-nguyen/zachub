@@ -3,7 +3,7 @@ import React from 'react'
 function AboutMe (){
 
     return(
-        <div id="about">
+        <section id="about">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
@@ -21,7 +21,7 @@ function AboutMe (){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default AboutMe

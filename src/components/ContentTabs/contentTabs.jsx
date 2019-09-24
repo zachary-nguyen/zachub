@@ -51,9 +51,9 @@ const ContentTabs = (props) => {
                     indicatorColor="secondary"
                     centered
                 >
-                    <Tab className={'white-text'} label="Experience" {...a11yProps(0)} />
-                    <Tab className={'white-text'} label="Portfolio" {...a11yProps(1)} />
-                    <Tab className={'white-text'} label="Contact" {...a11yProps(2)} />
+                    <Tab label="Experience" {...a11yProps(0)} />
+                    <Tab label="Portfolio" {...a11yProps(1)} />
+                    <Tab label="Contact" {...a11yProps(2)} />
                 </Tabs>
                 <TabPanel className={'portfolio'} value={props.selectedTab} index={0}>
                     <Timeline/>

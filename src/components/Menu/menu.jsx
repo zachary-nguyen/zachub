@@ -72,6 +72,11 @@ const Menu = (props) => {
                                   smooth={true}>
                             <ListItemText name={2} className={'nav-button'} primary={'Contact'}/>
                         </ListItem>
+                        <ListItem className={'hamburger-item'}
+                                  component={RouterLink}
+                                  to={'/game'}>
+                            <ListItemText className={'nav-button'} primary={'Game'}/>
+                        </ListItem>
                     </List>
                 </div>
             </Drawer>
