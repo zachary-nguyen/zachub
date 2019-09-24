@@ -19,7 +19,7 @@ body{
   height: 100%;
   width: 100%;
 
-  background-image: url('assets/blossom.jpg');
+  background-image: url('assets/fogu2.jpg');
   background-size: cover;
 
   /* Create the parallax scrolling effect */
@@ -203,7 +203,7 @@ body{
 }
 
 #content h1 {
-  color: #fff;
+  color: black;
   font-weight: 900;
   font-size: 5em;
   text-transform: uppercase;
@@ -273,7 +273,7 @@ body{
 .top span {
     cursor: pointer;
     display: block;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 10px auto;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -349,6 +349,7 @@ body{
 .language-block{
     position: relative;
     height: 50%;
+    text-align: center;
 }
 
 #languages p{
@@ -391,7 +392,7 @@ body{
 
 /* Style the back side */
 .flip-card-back {
-    background-color: dodgerblue;
+    background-color: black;
     color: white;
     transform: rotateY(180deg);
 }
