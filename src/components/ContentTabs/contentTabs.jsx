@@ -2,9 +2,10 @@ import React from 'react';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Timeline from '../../components/Timeline/timeline';
-import Portfolio from "../../views/Portfolio/portfolio";
+import Portfolio from "../Portfolio/portfolio";
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography'
+import Scroll from "react-scroll";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -30,6 +31,9 @@ function a11yProps(index) {
     };
 }
 
+const scrollToTop = () => {
+    Scroll.animateScroll.scrollToTop({smooth:true});
+};
 
 const ContentTabs = (props) => {
 
@@ -40,26 +44,32 @@ const ContentTabs = (props) => {
 
     return (
         <React.Fragment>
-            <Tabs
-                id={'portfolio'}
-                value={props.selectedTab}
-                onChange={handleMenuChange}
-                indicatorColor="secondary"
-                centered
-            >
-                <Tab className={'white-text'} label="Experience" {...a11yProps(0)} />
-                <Tab className={'white-text'} label="Portfolio" {...a11yProps(1)} />
-                <Tab className={'white-text'} label="Contact" {...a11yProps(2)} />
-            </Tabs>
-            <TabPanel className={'portfolio'} value={props.selectedTab} index={0}>
-                <Timeline/>
-            </TabPanel>
-            <TabPanel value={props.selectedTab} index={1}>
-                <Portfolio/>
-            </TabPanel>
-            <TabPanel value={props.selectedTab} index={2}>
-                <Portfolio/>
-            </TabPanel>
+            <div id={'portfolio'}>
+                <Tabs
+                    value={props.selectedTab}
+                    onChange={handleMenuChange}
+                    indicatorColor="secondary"
+                    centered
+                >
+                    <Tab className={'white-text'} label="Experience" {...a11yProps(0)} />
+                    <Tab className={'white-text'} label="Portfolio" {...a11yProps(1)} />
+                    <Tab className={'white-text'} label="Contact" {...a11yProps(2)} />
+                </Tabs>
+                <TabPanel className={'portfolio'} value={props.selectedTab} index={0}>
+                    <Timeline/>
+                </TabPanel>
+                <TabPanel value={props.selectedTab} index={1}>
+                    <Portfolio/>
+                </TabPanel>
+                <TabPanel value={props.selectedTab} index={2}>
+                    <Portfolio/>
+                </TabPanel>
+                <div className="top">
+                    <span id="to-top" onClick={scrollToTop}>
+                        <i className="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
         </React.Fragment>
     );
 }

@@ -8,11 +8,11 @@ const Timeline = () =>{
 
     return(
             <div id={'timeline'}>
-                <h2 className={'heading'}> Experience </h2>
+                <h2 className={'heading-white'}> Experience </h2>
                 <VerticalTimeline>
                     {experience.jobs.map((job, i) => (
                         <VerticalTimelineElement
-                            contentStyle={{border: '2px solid white', background: '#77A6B6', color: '#fff',boxShadow: '0px 2px 10px #77A6B6'}}
+                            contentStyle={{border: '2px solid white', background: 'white', color: '#black',boxShadow: '0px 2px 10px #77A6B6'}}
                             contentArrowStyle={{ borderRight: '7px solid white' }}
                             date={job.date}
                             iconStyle={{ background: '#e27d60', color: '#fff' }}
@@ -22,10 +22,10 @@ const Timeline = () =>{
                             <h3 className="vertical-timeline-element-title">{job.title}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{job.location}</h4>
                             <p><i>{job.company}</i></p>
-                            <p>{job.description1}</p>
-                            <p>{job.description2}</p>
-                            <p>{job.description3}</p>
-                            <p>{job.description4}</p>
+                            <p className={'desc-text-exp'}>{job.description1}</p>
+                            <p className={'desc-text-exp'}>{job.description2}</p>
+                            <p className={'desc-text-exp'}>{job.description3}</p>
+                            <p className={'desc-text-exp'}>{job.description4}</p>
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline>

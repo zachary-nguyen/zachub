@@ -18,6 +18,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-ace": "^7.0.4",
+    "react-devicon": "^0.1.9",
     "react-dinosaur-game": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",

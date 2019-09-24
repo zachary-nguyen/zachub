@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch} from "react-router";
 import Home from "../../views/Home/home";
-import Portfolio from "../../views/Portfolio/portfolio";
-import AboutMe from "../../views/AboutMe/aboutMe";
-import ContactMe from "../../views/ContactMe/contactMe";
+import Portfolio from "../Portfolio/portfolio";
+import AboutMe from "../AboutMe/aboutMe";
+import ContactMe from "../ContactMe/contactMe";
 import Playground from "../../views/Playground/playground";
 import Error from "../../views/Error/Error";
 

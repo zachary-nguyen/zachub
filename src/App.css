@@ -18,13 +18,6 @@
 body{
   height: 100%;
   width: 100%;
-  position: relative;
-  background-image: url('assets/nightcity.jpg')!important;
-  background-size: cover;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .heading {
@@ -170,7 +163,7 @@ body{
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background-image: url('assets/streetbackground.jpg');
+    background-image: url('assets/dude.jpg');
     background-size: cover;
     padding: 15px;
 
@@ -181,7 +174,13 @@ body{
 }
 
 #portfolio{
-    background-color: transparent;
+    position: relative;
+    background-image: url('assets/mountain3.jpg');
+    background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #content{
@@ -253,7 +252,6 @@ body{
 
 .top {
     text-align: center;
-    background: var(--background);
     color: white;
 }
 
@@ -265,7 +263,7 @@ body{
 .top span {
     cursor: pointer;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 0 auto;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -341,15 +339,12 @@ body{
     cursor: default;
     font-size: 1.2em;
     border: 1px solid black;
-    box-shadow: 2px 5px 15px #888888
+    /*box-shadow: 2px 5px 15px #888888*/
 }
 
 /*
  -- TIMELINE --
  */
-.vertical-timeline::before {
-    background: rgba(255,177,171,0.5)!important;
-}
 
 #timeline h2{
     color: var(--text);
@@ -357,6 +352,11 @@ body{
     border-bottom: 1px solid white ;
 }
 
+.desc-text-exp {
+    font-size: 14px!important;
+    text-align: left;
+    font-weight: 100;
+}
 /*
   Responsive
  */
