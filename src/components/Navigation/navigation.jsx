@@ -22,7 +22,7 @@ const Navigation = (props) => {
         <Link className={'nav-menu-a'} onClick={handleMenuChange} name={0} to={'portfolio'} ignoreCancelEvents smooth={true}>Experience</Link>
         <Link className={'nav-menu-a'} onClick={handleMenuChange} name={1} to={'portfolio'} ignoreCancelEvents smooth={true}>Portfolio</Link>
         <RouterLink className={'nav-menu-a'} to={'/playground'}>Playground</RouterLink>
-        <Link className={'nav-menu-a'} name={2} onClick={handleMenuChange} to={'portfolio'} ignoreCancelEvents smooth={true}>Contact</Link>
+        <Link className={'nav-menu-a'} to={'contact'} ignoreCancelEvents smooth={true}>Contact</Link>
         <RouterLink className={'nav-menu-a'} to={'/game'}> Game </RouterLink>
         <Social size={'sm'} class={'social'}/>
       </div>

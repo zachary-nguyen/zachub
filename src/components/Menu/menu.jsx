@@ -25,7 +25,7 @@ const Menu = (props) => {
 
   const scrollToElement = (tab) => {
     const s = tab.currentTarget.name;
-    props.handleMenuChange(s, true);
+    s !== 'contact' ? props.handleMenuChange(s, true) : null;
     setState({ ...state, open: false });
   };
 
@@ -65,13 +65,13 @@ const Menu = (props) => {
               <ListItemText className={'nav-button'} primary={'Playground'}/>
             </ListItem>
             <ListItem className={'hamburger-item'}
-              to={'portfolio'}
+              to={'contact'}
               component={Link}
-              name={2}
+              name={'contact'}
               onClick={scrollToElement}
               ignoreCancelEvents
               smooth={true}>
-              <ListItemText name={2} className={'nav-button'} primary={'Contact'}/>
+              <ListItemText className={'nav-button'} primary={'Contact'}/>
             </ListItem>
             <ListItem className={'hamburger-item'}
               component={RouterLink}
@@ -89,7 +89,7 @@ const Menu = (props) => {
 };
 
 Menu.propTypes = {
-  handleMenuChange: PropTypes.function
+  handleMenuChange: PropTypes.func
 };
 
 export default Menu;

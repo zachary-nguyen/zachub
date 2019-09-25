@@ -53,15 +53,11 @@ const ContentTabs = (props) => {
         >
           <Tab label="Experience" {...a11yProps(0)} />
           <Tab label="Portfolio" {...a11yProps(1)} />
-          <Tab label="Contact" {...a11yProps(2)} />
         </Tabs>
         <TabPanel className={'portfolio'} value={props.selectedTab} index={0}>
           <Timeline/>
         </TabPanel>
         <TabPanel value={props.selectedTab} index={1}>
-          <Portfolio/>
-        </TabPanel>
-        <TabPanel value={props.selectedTab} index={2}>
           <Portfolio/>
         </TabPanel>
         <div className="top">
@@ -76,7 +72,7 @@ const ContentTabs = (props) => {
 
 ContentTabs.propTypes = {
     selectedTab: PropTypes.number,
-    handleMenuChange: PropTypes.function,
+    handleMenuChange: PropTypes.func,
 };
 
 TabPanel.propType = {

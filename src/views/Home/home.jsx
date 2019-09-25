@@ -7,6 +7,7 @@ import ContentTabs from '../../components/ContentTabs/contentTabs';
 import Language from '../../components/Language/Language';
 import PropTypes from 'prop-types';
 import './home.css';
+import ContactMe from "../../components/ContactMe/contactMe";
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = React.useState(1);
@@ -38,6 +39,7 @@ const Home = () => {
       <Language/>
       <Skills/>
       <ContentTabs selectedTab={selectedTab} handleMenuChange={handleMenuChange}/>
+      <ContactMe/>
     </React.Fragment>
   );
 };

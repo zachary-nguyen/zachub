@@ -34,6 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 0.9em;
+    margin: 0 auto;
 }
 
 #lead-down{
@@ -51,13 +52,13 @@
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
     padding-top: 5px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #lead-down span {
     cursor: pointer;
     display: block;
-    margin: 0 50%;
+    margin: 0 auto;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -68,14 +69,12 @@
     display: inline-block;
     color: white;
     background: rgba(255,177,171,1);
-    padding: 15px 25px;
+    padding: 15px 30px;
     border: 3px solid #fff;
     border-radius: 30px;
     transition: .5s ease all;
     text-decoration: none!important;
-    margin-left: 40px;
-    margin-right: 5px;
-    margin-top: 20px;
+    margin: 20px 20px;
     text-align: center;
 }
 
@@ -154,10 +153,6 @@
 
 @media only screen and (max-width : 700px) {
 
-    #content h1 {
-        margin-left: 8%!important;
-    }
-
     .btn-rounded-white {
         position: relative;
         display: block;
@@ -172,7 +167,7 @@
 
     #content a {
         font-size: 0.9em!important;
-        padding: 5px 20px!important;
+        margin: 10px auto;
     }
 
     .btn-rounded-white {
