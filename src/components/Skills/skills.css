@@ -1,0 +1,65 @@
+/*
+ ---- SKILL STYLES ----
+ */
+
+#skills {
+    text-align: center;
+    border-bottom: 1px solid #dcd9d9;
+    padding: 50px 15px;
+    background: white;
+}
+
+#skills h2 {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+#skills ul{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+#skills li{
+    display: inline-block;
+    margin: 7px;
+    color: #374054;
+    background: white;
+    border-radius: 5px;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+}
+
+
+/* This container is needed to position the front and back side */
+.skill-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.skill-card{
+    background-color: transparent;
+    perspective: 1000px;
+}
+/* Position the front and back side */
+.skill-front, .skill-back {
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.skill-front{
+    background-color: white;
+    color: black;
+}
+
+.skill-back{
+    background-color: white;
+    color: black;
+}

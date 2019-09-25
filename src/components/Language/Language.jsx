@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import './languages.css';
 
 const Language = () => {
   return (

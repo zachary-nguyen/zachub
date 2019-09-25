@@ -1,0 +1,64 @@
+/*
+ * -- NAVIGATION
+ */
+
+#nav-menu{
+    position: relative;
+    float: right;
+    top: 4%;
+    right: 10%;
+    z-index: 10;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#nav-menu a{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.nav-menu-a:hover{
+    color: #fff!important;
+}
+
+.nav-menu-a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-menu-a:hover:after {
+    width: 75%;
+    left: 0;
+}
+
+
+/*
+  Responsive
+ */
+
+@media only screen and (max-width : 992px) {
+
+    #nav-menu a{
+        position: relative!important;
+        top: 5%!important;
+    }
+
+}
+
+@media only screen and (max-width : 700px) {
+
+    #nav-menu {
+        display: none!important;
+    }
+
+}

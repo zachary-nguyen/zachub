@@ -44,7 +44,7 @@ const ContentTabs = (props) => {
 
   return (
     <React.Fragment>
-      <div id={'portfolio'}>
+      <div id={'content-tabs'}>
         <Tabs
           value={props.selectedTab}
           onChange={handleMenuChange}

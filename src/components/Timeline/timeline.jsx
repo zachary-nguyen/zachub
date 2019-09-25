@@ -3,6 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import WorkIcon from '@material-ui/icons/Work';
 import * as experience from '../../assets/experience';
+import './timeline.css';
 
 const Timeline = () => {
   return (

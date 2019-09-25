@@ -36,7 +36,7 @@ html,body{
     font-size: 2em;
     color: #282c34!important;
     font-weight: 400;
-    margin: 30px 0 30px 0px;
+    margin: 30px auto 30px auto;
     border-bottom: 1px solid black!important;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -60,6 +60,15 @@ html,body{
     animation: fadein 2s;
 }
 
+.p-fade-in{
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+    font-size: 1em;
+    font-weight: 300;
+}
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -77,190 +86,6 @@ html,body{
     to   { opacity: 1; }
 }
 
-/*
-  ----- HOME STYLE-----
- */
-.overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /*background: linear-gradient(to bottom, rgba(21,97,173,1),rgba(21,97,173,0.3));*/
-    /*opacity: 0.35;*/
-    z-index: 1;
-}
-
-/*
- --- HAMBURGER MENU ---
- */
-#hamburger-menu {
-    display: none;
-}
-
-.hamburger-drawer{
-    height: 100vh!important;
-    z-index: 10;
-}
-
-.hamburger-item{
-    text-align: center!important;
-    text-decoration: none!important;
-    color: #ffb1ab!important;
-}
-
-.hamburger-item:hover{
-    color: black!important;
-    cursor: pointer;
-}
-
-.hamburger-content{
-    top: 30%!important;
-}
-
-#nav-menu{
-    position: relative;
-    float: right;
-    top: 4%;
-    right: 10%;
-    z-index: 10;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-
-#nav-menu a{
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: black;
-    margin-top: 10px;
-    font-weight: lighter;
-    cursor: pointer;
-}
-
-.nav-menu-a:hover{
-    color: #fff!important;
-}
-
-.nav-menu-a:after {
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-
-.nav-menu-a:hover:after {
-    width: 75%;
-    left: 0;
-}
-
-.social a{
-    display: inline-block!important;
-    float: left;
-    margin-right: 10px;
-}
-
-.social a:hover{
-    color: #fff!important;
-}
-
-.main{
-    position: relative;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    /*background-image: url('assets/dude.jpg');*/
-    background-size: cover;
-    padding: 15px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#portfolio{
-    position: relative;
-    /*background-image: url('assets/mountain3.jpg');*/
-    background-size: cover;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#content{
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding-left: 10px;
-}
-
-#content h1 {
-  color: black;
-  font-weight: 900;
-  font-size: 5em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 0.9em;
-}
-
-#lead-down{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-    bottom: 5%;
-    color: #fff;
-}
-
-#lead-down i {
-    animation: pulsate 1.5s ease;
-    animation-iteration-count: infinite;
-    padding-top: 5px;
-}
-
-#lead-down span {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 3px solid white;
-    text-align: center;
-}
-
-.btn-rounded-white{
-    display: inline-block;
-    color: white;
-    background: rgba(255,177,171,1);
-    padding: 15px 25px;
-    border: 3px solid #fff;
-    border-radius: 30px;
-    transition: .5s ease all;
-    text-decoration: none!important;
-    margin-left: 20px ;
-    margin-right: 5px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.btn-rounded-white:hover{
-    border-color: #fff;
-    background: rgba(255,177,171,0.8);
-    color: #fff;
-}
 
 .top {
     text-align: center;
@@ -270,250 +95,18 @@ html,body{
 .top i{
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
+    margin: auto;
 }
 
 .top span {
     cursor: pointer;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: auto auto 20px auto;
     width: 35px;
     height: 35px;
     border-radius: 50%;
     border: 3px solid white;
     text-align:center;
-}
-
-@keyframes pulsate {
-    0% {
-        transform: scale(1, 1);
-    }
-
-    50% {
-        transform: scale(1.2, 1.2);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-/*
- ---- ABOUT STYLE ----
- */
-#about {
-    padding: 75px 15px;
-    border-bottom: 1px solid #dcd9d9;
-    background: #fff;
-}
-
-#about h2{
-    color: #374054;
-    border-bottom: 1px solid black ;
-}
-
-#about p{
-    color: black;
-    margin: 0;
-}
-/**
- -- LANGUAGES
- */
-
-#languages {
-    text-align: center;
-    border-bottom: 1px solid #dcd9d9;
-    width: 100%;
-    height: 400px;
-    /*background-image: url('assets/mountain.jpg');*/
-    background-size: cover;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.language-card{
-    height: 70%;
-    width: 30%;
-    left: 35%;
-    position: relative;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-.language-card-ctn{
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.language-block{
-    position: relative;
-    height: 50%;
-    text-align: center;
-}
-
-#languages p{
-    padding-top: 15px;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    perspective: 1000px;
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    background-color: white;
-    color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-    background-color: black;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-/* This container is needed to position the front and back side */
-.skill-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.skill-card{
-    background-color: transparent;
-    perspective: 1000px;
-}
-/* Position the front and back side */
-.skill-front, .skill-back {
-    position: relative;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-.skill-front{
-    background-color: white;
-    color: black;
-}
-
-.skill-back{
-    background-color: white;
-    color: black;
-}
-/*
- ---- SKILL STYLES ----
- */
-
-#skills {
-    padding: 20px 15px 50px;
-    text-align: center;
-    border-bottom: 1px solid #dcd9d9;
-    background: white;
-}
-
-#skills h2 {
-    color: black;
-    border-bottom: 1px solid black;
-    margin: 15px 0 30px 0;
-
-}
-
-#skills ul{
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 800px;
-}
-
-#skills li{
-    display: inline-block;
-    margin: 7px;
-    color: #374054;
-    background: white;
-    border-radius: 5px;
-    list-style: none;
-    cursor: default;
-    font-size: 1.2em;
-    /*box-shadow: 2px 5px 15px #888888*/
-}
-
-/*
- -- TIMELINE --
- */
-
-#timeline h2{
-    color: var(--text);
-    margin-bottom: 50px;
-    border-bottom: 1px solid white ;
-}
-
-.desc-text-exp {
-    font-size: 14px!important;
-    text-align: left;
-    font-weight: 100;
-}
-
-.desc-text {
-    padding-bottom: 5px;
-}
-
-#playground{
-    height: 80%;
-    width: 80%;
-    top:10%;
-    left: 10%;
-    padding: 50px;
-    background: #282c34;
-    position: fixed;
-
-}
-
-.playground-btn{
-    width: 100%;
-}
-
-.editor-block-right{
-    background: white;
-    float:right;
-    height: 80%;
-    width: 50%!important;
-}
-
-.editor-block-left{
-    height: 80%!important;
-    position: relative;
-    float:left;
-    width: 50%!important;
 }
 
 .goBack{
@@ -526,98 +119,15 @@ html,body{
     color: white;
     text-decoration: none;
 }
+
 /*
   Responsive
  */
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1169px) {
 
-    #lead {
-        height: auto;
-        min-height: auto;
-        max-height: auto;
-        padding: 100px 15px;
-    }
-
-    #content {
-        position: relative;
-        transform: none;
-        left: 5%;
-        top: 40%;
-    }
-
-    #nav-menu a{
-        position: relative;
-        top: 5%;
-    }
-
-    #content h1 {
-        font-size: 3em;
-    }
-
-
-    #about {
-        text-align: center;
-    }
-    #about p {
-        text-align: left;
-    }
-}
-
-@media only screen and (max-width : 768px) {
-
-    #content {
-        top: 40%;
-    }
-
-    #content h1 {
-        font-size: 2em;
+    .top span{
+        margin-left: 50%!important;
     }
 
 }
-
-@media only screen and (max-width : 700px) {
-
-    #nav-menu {
-        display: none;
-    }
-
-    #hamburger-menu {
-        display: block;
-        float: right;
-        z-index: 10;
-    }
-
-    #content {
-        top: 40%;
-    }
-
-    #content h1{
-        position: relative;
-    }
-
-    .btn-rounded-white {
-        position: relative;
-        display: block;
-        width: 50%;
-        left: 15%;
-    }
-}
-
-@media only screen and (max-width : 480px) {
-
-    #languages b{
-        padding-right: 5px!important;
-        font-size: 10px!important;
-    }
-
-    #content h1 {
-        font-size: 1.5em;
-    }
-
-    #content a {
-        font-size: 0.9em;
-        padding: 5px 20px;
-    }
-}
-

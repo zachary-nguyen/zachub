@@ -6,6 +6,7 @@ import Skills from '../../components/Skills/skills';
 import ContentTabs from '../../components/ContentTabs/contentTabs';
 import Language from '../../components/Language/Language';
 import PropTypes from 'prop-types';
+import './home.css';
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = React.useState(1);

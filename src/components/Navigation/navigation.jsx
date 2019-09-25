@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import Social from '../Social/social';
 import Menu from '../Menu/menu';
 import PropTypes from 'prop-types';
+import './navigation.css';
 
 const Navigation = (props) => {
   const handleMenuChange = (e, miniMenu) => {

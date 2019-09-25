@@ -1,0 +1,13 @@
+/*
+ * -- SOCIAL
+ */
+
+.social a{
+    display: inline-block!important;
+    float: left;
+    margin-right: 10px;
+}
+
+.social a:hover{
+    color: #fff!important;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
 import * as Languages from '../../assets/skills';
+import './skills.css';
 
 const Skill = (props) => {
 

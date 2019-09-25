@@ -38,9 +38,9 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       <h1 className={'heading'}> Portfolio </h1>
-      <p> Projects I have created or contributed to! </p>
+      <p className={'p-fade-in'}> Projects I have created or contributed to! </p>
       {repositories
-        ? <VerticalTimeline>
+        ? <VerticalTimeline id={'portfolio'}>
           {repositories.map((repo, i) => (
             <VerticalTimelineElement
               contentStyle={{ border: '2px solid white', background: 'white', color: 'black', boxShadow: '0px 2px 10px #77A6B6' }}

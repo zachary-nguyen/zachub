@@ -1,0 +1,19 @@
+/*
+ -- TIMELINE --
+ */
+
+#timeline h2{
+    color: var(--text);
+    margin-bottom: 50px;
+    border-bottom: 1px solid white ;
+}
+
+.desc-text-exp {
+    font-size: 14px!important;
+    text-align: left;
+    font-weight: 100;
+}
+
+.desc-text {
+    padding-bottom: 5px;
+}

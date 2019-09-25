@@ -1,0 +1,33 @@
+/*
+ * -- PLAYGROUND
+ */
+
+
+#playground{
+    height: 80%;
+    width: 80%;
+    top:10%;
+    left: 10%;
+    padding: 50px;
+    background: #282c34;
+    position: fixed;
+
+}
+
+.playground-btn{
+    width: 100%;
+}
+
+.editor-block-right{
+    background: white;
+    float:right;
+    height: 80%;
+    width: 50%!important;
+}
+
+.editor-block-left{
+    height: 80%!important;
+    position: relative;
+    float:left;
+    width: 50%!important;
+}
