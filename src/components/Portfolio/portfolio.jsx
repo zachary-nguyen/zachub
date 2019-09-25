@@ -56,7 +56,7 @@ const Portfolio = () => {
               </p>
               <Technology repo={repo.name}/>
               <br/>
-              <a href={'https://github.com/zachary-nguyen/' + repo.name} target={'_blank'} className="btn-rounded-white">View Source</a>
+              <a href={'https://github.com/zachary-nguyen/' + repo.name} target={'_blank'} className="view-src">View Source</a>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline> : null
