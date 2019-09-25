@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import PropTypes from 'prop-types';
 import './menu.css';
+import Social from "../Social/social";
 
 const Menu = (props) => {
   const [state, setState] = React.useState({
@@ -76,6 +77,9 @@ const Menu = (props) => {
               component={RouterLink}
               to={'/game'}>
               <ListItemText className={'nav-button'} primary={'Game'}/>
+            </ListItem>
+            <ListItem className={'hamburger-item '}>
+              <Social size={'5x'} class={'social-mini'}/>
             </ListItem>
           </List>
         </div>

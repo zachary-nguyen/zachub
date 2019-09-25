@@ -1,18 +1,24 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import PropTypes from 'prop-types';
+
 import './social.css';
 
-const Social = () => {
+const Social = (props) => {
   return (
-    <div className={'social'}>
-      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
-      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedin}/></a>
-      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faDiscord}/></a>
-      <a href="mailto:zack.nguyen@hotmail.com"><FontAwesomeIcon icon={faEnvelope}/></a>
+    <div className={props.class}>
+      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon size={props.size} icon={faGithub}/></a>
+      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon size={props.size} icon={faLinkedin}/></a>
+      <a href="mailto:zack.nguyen@hotmail.com"><FontAwesomeIcon size={props.size} icon={faEnvelope}/></a>
     </div>
   );
+};
+
+Social.propTypes = {
+  class: PropTypes.string,
+  size: PropTypes.string
 };
 
 export default Social;

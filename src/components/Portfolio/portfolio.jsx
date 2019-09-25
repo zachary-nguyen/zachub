@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component/dist-es6';
-import { FaJava } from 'react-icons/fa';
+import { FaJs } from 'react-icons/fa';
 import Chip from '@material-ui/core/Chip';
 import 'react-vertical-timeline-component/style.min.css';
 import PropTypes from 'prop-types';
+import './portfolio.css';
 
 const Technology = (props) => {
   const [technologies, setTechnologies] = React.useState(null);
@@ -19,7 +20,7 @@ const Technology = (props) => {
     <React.Fragment>
       {technologies
         ? (technologies.map((tech, i) => (
-          <Chip label={tech} key={i}/>
+          <Chip className={'margin'} label={tech} key={i}/>
         ))) : null}
     </React.Fragment>
   );
@@ -47,7 +48,7 @@ const Portfolio = () => {
               contentArrowStyle={{ borderRight: '7px solid  white' }}
               date={''}
               iconStyle={{ background: '#00d8ff', color: '#fff' }}
-              icon={<FaJava/>}
+              icon={<FaJs/>}
               key={i}
             >
               <h3 className="vertical-timeline-element-title">{repo.name}</h3>

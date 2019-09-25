@@ -24,7 +24,7 @@ const Navigation = (props) => {
         <RouterLink className={'nav-menu-a'} to={'/playground'}>Playground</RouterLink>
         <Link className={'nav-menu-a'} name={2} onClick={handleMenuChange} to={'portfolio'} ignoreCancelEvents smooth={true}>Contact</Link>
         <RouterLink className={'nav-menu-a'} to={'/game'}> Game </RouterLink>
-        <Social/>
+        <Social size={'sm'} class={'social'}/>
       </div>
     </React.Fragment>
   );

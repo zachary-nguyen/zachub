@@ -25,7 +25,22 @@
     top: 30%!important;
 }
 
+.social-mini{
+    display: inline-block!important;
+    position: relative;
+    margin: 0 auto;
+}
 
+.social-mini a{
+    color: black;
+    bottom: 0;
+    position: relative;
+    margin-left: 10px;
+}
+
+.social-mini a:hover{
+    color: #ffb1ab;
+}
 /*
   Responsive
  */

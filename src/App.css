@@ -37,6 +37,7 @@ html,body{
     color: #282c34!important;
     font-weight: 400;
     margin: 30px auto 30px auto;
+    padding-bottom: 5px;
     border-bottom: 1px solid black!important;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
