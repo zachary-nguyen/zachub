@@ -77,10 +77,26 @@
     transform: rotateY(180deg);
 }
 
+.flip-card-back svg{
+    display: inline-block;
+    margin: 0 auto;
+}
 
+.flip-card-back p{
+    padding-left: 5px;
+    padding-right: 5px;
+}
 /*
   Responsive
  */
+@media only screen and (max-width : 975px) {
+
+    .flip-card-back svg,p{
+       display: block;
+        padding: 0;
+    }
+}
+
 
 @media only screen and (max-width : 480px) {
 

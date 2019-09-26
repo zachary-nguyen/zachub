@@ -19,8 +19,8 @@ const Navigation = (props) => {
     <React.Fragment>
       <Menu handleMenuChange={handleMenuChange}/>
       <div id={'nav-menu'}>
-        <Link className={'nav-menu-a'} onClick={handleMenuChange} name={0} to={'portfolio'} ignoreCancelEvents smooth={true}>Experience</Link>
-        <Link className={'nav-menu-a'} onClick={handleMenuChange} name={1} to={'portfolio'} ignoreCancelEvents smooth={true}>Portfolio</Link>
+        <Link className={'nav-menu-a'} onClick={handleMenuChange} name={0} to={'content-tabs'} ignoreCancelEvents smooth={true}>Experience</Link>
+        <Link className={'nav-menu-a'} onClick={handleMenuChange} name={1} to={'content-tabs'} ignoreCancelEvents smooth={true}>Portfolio</Link>
         <RouterLink className={'nav-menu-a'} to={'/playground'}>Playground</RouterLink>
         <Link className={'nav-menu-a'} to={'contact'} ignoreCancelEvents smooth={true}>Contact</Link>
         <RouterLink className={'nav-menu-a'} to={'/game'}> Game </RouterLink>
@@ -31,7 +31,7 @@ const Navigation = (props) => {
 };
 
 Navigation.propTypes = {
-    handleMenuChange: PropTypes.function
+    handleMenuChange: PropTypes.func
 };
 
 export default Navigation;

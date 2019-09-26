@@ -45,7 +45,7 @@ const Home = () => {
 };
 
 Home.propTypes = {
-  handleMenuChange: PropTypes.function
+  handleMenuChange: PropTypes.func
 };
 
 export default Home;

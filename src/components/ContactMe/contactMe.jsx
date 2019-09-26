@@ -8,7 +8,7 @@ const ContactMe = () => {
       <footer id={'contact'}>
           <h1 className={'heading'}> Contact Me </h1>
           <p> Want to work together? Contact me and we can chat! </p>
-          <FontAwesomeIcon onClick={()=>{window.location.href =('mailto:zack.nguyen@hotmail.com')}} size={'x10'} icon={faEnvelope}/>
+          <FontAwesomeIcon onClick={()=>{window.location.href =('mailto:zack.nguyen@hotmail.com');}} size={'10x'} icon={faEnvelope}/>
       </footer>
   );
 };
