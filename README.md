@@ -1,6 +1,6 @@
 # ZacHub
 
-Portfolio website
+Portfolio website in ReactJs
 
 # TODO:
 
