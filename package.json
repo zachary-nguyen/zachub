@@ -90,8 +90,8 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "heroku-prebuild": "npm install -g serve",
-    "start": "node --max_old_space_size=2560  scripts/start.js",
+    "start": "cd backend && npm start",
+    "start:dev": "node --max_old_space_size=2560  scripts/start.js",
     "build": "node --max_old_space_size=2560  scripts/build.js",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
