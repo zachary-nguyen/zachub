@@ -16,7 +16,7 @@ function AboutMe () {
                             and love putting my skills to test. This is a small portfolio website developed with ReactJs just showcasing some of my latest work and some information to get to know me.
                             If you have any questions regarding the website or looking for some help on a project (open source or not) feel free to contact me via the link at the bottom.
             </p>
-            <a href={'https://github.com/zachary-nguyen/zachub'} target={'_blank'} className="view-src">View Portfolio Source Code</a>
+            <a href={'https://github.com/zachary-nguyen/zachub'} rel={"noreferrer"} target={'_blank'} className="view-src">View Portfolio Source Code</a>
           </div>
         </div>
       </div>

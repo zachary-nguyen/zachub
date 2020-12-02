@@ -2,6 +2,18 @@
   "jobs": [
     {
       "title": "Full-Stack Developer",
+      "company": "Initiate.AI",
+      "location": "Los Angeles, CA",
+      "date" : "October 2019 - September 2020",
+      "website" : "https://initiate.ai/",
+      "description1": "• Implemented a REST API with Node.js and Express to allow communication between front-end and back-end.",
+      "description2": "• Worked tightly with UX to integrate a responsive design for the web application.",
+      "description3": "• Developed an API wrapper to facilitate interaction with over 5 different popular stock media libraries.\n",
+      "description4": "• Researched and tested various EC2 instances for load testing to determine best option for production.",
+      "description5": "• Designed a process allowing users to create and render videos from the browser.\n"
+    },
+    {
+      "title": "Full-Stack Developer",
       "company": "Statistic Canada",
       "location": "Ottawa, ON",
       "date" : "May 2018 - Present",

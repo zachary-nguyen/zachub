@@ -10,7 +10,7 @@ const Social = (props) => {
   return (
     <div className={props.class}>
       <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon size={props.size} icon={faGithub}/></a>
-      <a href="https://github.com/zachary-nguyen" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon size={props.size} icon={faLinkedin}/></a>
+      <a href="https://www.linkedin.com/in/zachary-nguyen98/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon size={props.size} icon={faLinkedin}/></a>
       <a href="mailto:zack.nguyen@hotmail.com"><FontAwesomeIcon size={props.size} icon={faEnvelope}/></a>
     </div>
   );

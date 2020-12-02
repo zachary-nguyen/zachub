@@ -26,6 +26,7 @@ const Timeline = () => {
             <p className={'desc-text-exp'}>{job.description2}</p>
             <p className={'desc-text-exp'}>{job.description3}</p>
             <p className={'desc-text-exp'}>{job.description4}</p>
+            <p className={'desc-text-exp'}>{job.description5}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
