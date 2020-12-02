@@ -90,16 +90,16 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "install:all": "npm install && npm install:backend",
-    "install:backend": "cd backend && npm install",
-    "start": "cd backend && npm start",
+    "install:all": "yarn install && yarn install:backend",
+    "install:backend": "cd backend && yarn install",
+    "start": "cd backend && yarn start",
     "start:dev": "node --max_old_space_size=2560  scripts/start.js",
     "build": "node --max_old_space_size=2560  scripts/build.js",
     "test": "node scripts/test.js",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "heroku-prebuild": "npm install:all"
+    "heroku-prebuild": "yarn install:all"
   },
   "eslintConfig": {
     "extends": "react-app"
