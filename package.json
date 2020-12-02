@@ -99,7 +99,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "heroku-prebuild": "npm @install:all"
+    "heroku-prebuild": "npm install:all"
   },
   "eslintConfig": {
     "extends": "react-app"
