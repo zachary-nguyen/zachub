@@ -22,7 +22,7 @@
     "chalk": "^2.4.1",
     "cors": "^2.8.5",
     "envalid": "^6.0.2",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-jwt": "^6.0.0",
     "fs": "^0.0.1-security",
     "jest": "^24.8.0",
